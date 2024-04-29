@@ -1,0 +1,28 @@
+{# templates/video_game/index.html.twig #}
+
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/header.css') }}">
+
+{% include 'header/header.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Liste des jeux vidéo</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Quantité</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for videoGame in videoGames %}
+                    <tr>
+                        <td>{{ videoGame.name }}</td>
+                        <td>{{ videoGame.quantity }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

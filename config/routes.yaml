@@ -1,0 +1,9 @@
+# config/routes/user.yaml
+
+
+# config/routes.yaml
+
+app_video_game:
+    path: /video/game
+    controller: 'App\Controller\VideoGameController::index'
+    methods: GET
